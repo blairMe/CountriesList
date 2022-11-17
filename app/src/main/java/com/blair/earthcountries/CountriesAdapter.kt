@@ -34,7 +34,10 @@ class CountriesAdapter : RecyclerView.Adapter<CountriesAdapter.CountriesViewHold
     }
 
     override fun onBindViewHolder(holder: CountriesViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.binding.apply {
+            val theCountries = countries[position]
+            countryName.text = theCountries.name.toString()
+        }
     }
 
     override fun getItemCount(): Int {
