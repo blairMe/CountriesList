@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() = binding.rvCountries.apply {
-        countriesAdapter = CountriesAdapter()
+        countriesAdapter = CountriesAdapter(this@MainActivity)
         adapter = countriesAdapter
         layoutManager = LinearLayoutManager(this@MainActivity)
     }

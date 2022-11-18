@@ -1,13 +1,16 @@
 package com.blair.earthcountries
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.blair.earthcountries.databinding.CountryItemBinding
+import com.bumptech.glide.Glide
+import kotlinx.coroutines.NonDisposableHandle.parent
 
-class CountriesAdapter : RecyclerView.Adapter<CountriesAdapter.CountriesViewHolder>() {
+class CountriesAdapter(private val theContext : Context) : RecyclerView.Adapter<CountriesAdapter.CountriesViewHolder>() {
     inner class CountriesViewHolder(val binding: CountryItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     private val diffCallBack = object : DiffUtil.ItemCallback<Countries>() {
@@ -39,6 +42,12 @@ class CountriesAdapter : RecyclerView.Adapter<CountriesAdapter.CountriesViewHold
             countryName.text = theCountries.name
             countryCode.text = theCountries.callingCodes.toString()
             countryCapital.text = theCountries.capital
+            Glide.with(theContext)
+                .load(theCountries.flags.png.toString())
+                .centerCrop()
+                .into(flagView)
+
+
         }
     }
 
