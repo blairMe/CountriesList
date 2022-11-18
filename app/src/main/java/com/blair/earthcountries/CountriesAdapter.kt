@@ -36,7 +36,9 @@ class CountriesAdapter : RecyclerView.Adapter<CountriesAdapter.CountriesViewHold
     override fun onBindViewHolder(holder: CountriesViewHolder, position: Int) {
         holder.binding.apply {
             val theCountries = countries[position]
-            countryName.text = theCountries.name.toString()
+            countryName.text = theCountries.name
+            countryCode.text = theCountries.callingCodes.toString()
+            countryCapital.text = theCountries.capital
         }
     }
 

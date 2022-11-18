@@ -15,7 +15,6 @@
 
         <ImageView
             android:id="@+id/flagView"
-            android:visibility="gone"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             tools:srcCompat="@tools:sample/avatars" />
@@ -40,24 +39,18 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-<!--                <TextView-->
-<!--                    android:id="@+id/country_code"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:visibility="gone"-->
-<!--                    android:text="+254"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textSize="15sp" />-->
-
+                <TextView
+                    android:id="@+id/country_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/country_capital"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:text="Nairobi"
-                android:paddingStart="3dp"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:layout_below="@+id/the_name_container" />
