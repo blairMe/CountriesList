@@ -1,4 +1,4 @@
-package com.blair.earthcountries
+package com.blair.earthcountries.view.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.blair.earthcountries.Countries
 import com.blair.earthcountries.databinding.CountryItemBinding
 import com.bumptech.glide.Glide
-import kotlinx.coroutines.NonDisposableHandle.parent
 
 class CountriesAdapter(private val theContext : Context) : RecyclerView.Adapter<CountriesAdapter.CountriesViewHolder>() {
     inner class CountriesViewHolder(val binding: CountryItemBinding) : RecyclerView.ViewHolder(binding.root)
@@ -39,15 +39,13 @@ class CountriesAdapter(private val theContext : Context) : RecyclerView.Adapter<
     override fun onBindViewHolder(holder: CountriesViewHolder, position: Int) {
         holder.binding.apply {
             val theCountries = countries[position]
-            countryName.text = theCountries.name
-            countryCode.text = theCountries.callingCodes.toString()
+            countryName.text = "${theCountries.name} ${theCountries.callingCodes.toString()}"
+            //countryCode.text = theCountries.callingCodes.toString()
             countryCapital.text = theCountries.capital
             Glide.with(theContext)
                 .load(theCountries.flags.png.toString())
                 .centerCrop()
                 .into(flagView)
-
-
         }
     }
 
