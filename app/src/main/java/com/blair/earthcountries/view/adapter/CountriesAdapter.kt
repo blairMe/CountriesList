@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.blair.earthcountries.Countries
+import com.blair.earthcountries.model.entities.Countries
 import com.blair.earthcountries.databinding.CountryItemBinding
 import com.bumptech.glide.Glide
 

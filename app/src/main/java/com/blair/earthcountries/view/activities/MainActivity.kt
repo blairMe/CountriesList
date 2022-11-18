@@ -6,7 +6,7 @@ import android.util.Log
 import android.view.View
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.blair.earthcountries.RetrofitInstance
+import com.blair.earthcountries.model.network.RetrofitInstance
 import com.blair.earthcountries.databinding.ActivityMainBinding
 import com.blair.earthcountries.view.adapter.CountriesAdapter
 import retrofit2.HttpException

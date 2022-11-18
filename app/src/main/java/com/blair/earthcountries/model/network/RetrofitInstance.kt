@@ -1,8 +1,7 @@
-package com.blair.earthcountries
+package com.blair.earthcountries.model.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
 object RetrofitInstance {
     val api : CountriesAPI by lazy {

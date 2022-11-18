@@ -1,4 +1,6 @@
-package com.blair.earthcountries
+package com.blair.earthcountries.model.entities
+
+import com.blair.earthcountries.model.entities.Flags
 
 data class Countries(
     val alpha2Code: String,

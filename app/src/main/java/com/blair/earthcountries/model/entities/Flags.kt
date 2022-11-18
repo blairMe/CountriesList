@@ -1,4 +1,4 @@
-package com.blair.earthcountries
+package com.blair.earthcountries.model.entities
 
 data class Flags(
     val png: String,
