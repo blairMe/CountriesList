@@ -1,4 +1,4 @@
-package com.blair.earthcountries.view.adapter
+package com.blair.earthcountries.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

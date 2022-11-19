@@ -1,4 +1,4 @@
-package com.blair.earthcountries.view.activities
+package com.blair.earthcountries.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,7 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.blair.earthcountries.model.network.RetrofitInstance
 import com.blair.earthcountries.databinding.ActivityMainBinding
-import com.blair.earthcountries.view.adapter.CountriesAdapter
+import com.blair.earthcountries.ui.adapter.CountriesAdapter
 import retrofit2.HttpException
 import java.io.IOException
 
